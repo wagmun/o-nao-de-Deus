@@ -1,0 +1,8 @@
+# Keep private source files, manuscripts, and print-resolution exports out of Git/deploy
+*.pxd
+*.docx
+*.pdf
+/*.png
+banners-amazon-a-plus/
+.DS_Store
+kdp-conteudo-a-plus/
