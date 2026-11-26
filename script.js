@@ -29,7 +29,7 @@ const TRANSLATIONS = {
       "Um ensaio existencial breve e sem clichês sobre a oração, o silêncio divino e por que Deus não é um balconista de pedidos.",
     hero_rating: "★★★★★ 5,0 na Amazon",
     hero_format: "Leitura em uma sentada • Kindle & Kindle Unlimited",
-    cta_amazon: "Ler na Amazon (Kindle / KU)",
+    cta_amazon: "Ler na Amazon (Kindle)",
     cta_sample: "Receber 1º trecho grátis",
     ku_note: "Disponível gratuitamente para assinantes do Kindle Unlimited ou para compra avulsa.",
     cover_title:
@@ -91,7 +91,7 @@ const TRANSLATIONS = {
       "A short, cliché-free existential essay on prayer, divine silence, and why God is not a cosmic vending machine.",
     hero_rating: "New English Edition on Amazon",
     hero_format: "One-sitting read • Kindle & Kindle Unlimited",
-    cta_amazon: "Read on Amazon (Kindle / KU)",
+    cta_amazon: "Read on Amazon (Kindle)",
     cta_sample: "Get free opening excerpt",
     ku_note: "Read free with Kindle Unlimited or purchase the Kindle edition directly.",
     cover_title:
