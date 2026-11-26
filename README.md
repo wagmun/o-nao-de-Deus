@@ -4,7 +4,7 @@ Página estática bilíngue (PT / EN), sem dependências: `index.html`, `styles.
 
 ## Publicação
 
-GitHub Pages, conta `wagmun`. Só sobem esses arquivos; manuscritos, PDFs, PNGs grandes e materiais da Amazon ficam fora (veja `.gitignore`).
+GitHub Pages, conta `wagmun`. Endereço: https://wagmun.github.io/o-nao-de-Deus/ Só sobem esses arquivos; manuscritos, PDFs, PNGs grandes e materiais da Amazon ficam fora (veja `.gitignore`).
 
 ## Captura de e-mail
 
