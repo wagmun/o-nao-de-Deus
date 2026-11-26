@@ -181,7 +181,7 @@ function applyLanguage(lang) {
 
   const coverImg = document.getElementById("book-cover-img");
   if (coverImg) {
-    coverImg.src = COVER_ASSETS[currentLang].src;
+    coverImg.src = (document.documentElement.dataset.base || "") + COVER_ASSETS[currentLang].src;
     coverImg.alt = COVER_ASSETS[currentLang].alt;
   }
 
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     savedLang = null;
   }
 
-  applyLanguage(urlLang || savedLang || "pt");
+  applyLanguage(urlLang || document.documentElement.dataset.pageLang || savedLang || "pt");
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
