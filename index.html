@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
   <!-- Subtle ambient light split echoing the book cover -->
@@ -76,7 +76,7 @@
               Ler na Amazon (Kindle)
             </a>
             <a href="#amostra" class="btn btn-ghost" data-i18n="cta_sample">
-              Receber 1º trecho grátis
+              Ler um trecho grátis
             </a>
           </div>
 
@@ -182,55 +182,70 @@
       </div>
     </section>
 
-    <!-- Free Preview + Email Capture -->
+    <!-- Free Reading Chapter (No Email Required) -->
     <section id="amostra" class="section">
-      <div class="container sample-box">
-        <div class="sample-copy">
-          <p class="section-kicker" data-i18n="sample_kicker">PRÉVIA GRATUITA &amp; CARTAS DO AUTOR</p>
+      <div class="container reading-wrapper">
+        <div class="reading-header">
+          <p class="section-kicker" data-i18n="sample_kicker">LEITURA GRATUITA — SEM CADASTRO</p>
           <h2 class="section-title" data-i18n="sample_title">
-            Leia a abertura e acompanhe novas reflexões por e-mail
+            Leia um trecho completo do livro agora mesmo
           </h2>
           <p class="section-intro" data-i18n="sample_intro">
-            Deixe seu e-mail para ler agora o trecho de abertura e receber, de vez em quando, novos textos sobre fé, dúvida e liberdade. Sem spam.
+            Sem pedir e-mail, sem cadastro. Leia abaixo o capítulo completo “O Ponto de Partida — O Paradoxo da Oração”.
           </p>
-
-          <!-- O envio é feito pelo script.js (FORM_ENDPOINT, Formspree). -->
-          <form id="lead-form" class="lead-form" method="POST">
-            <label for="email-input" class="sr-only" data-i18n="form_label">Seu melhor e-mail</label>
-            <input
-              id="email-input"
-              name="email"
-              type="email"
-              required
-              placeholder="seu@email.com"
-              autocomplete="email"
-            />
-            <button type="submit" class="btn btn-primary" data-i18n="form_btn">
-              Quero receber
-            </button>
-          </form>
-          <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
         </div>
 
-        <div class="excerpt-card">
-          <span class="excerpt-tag" data-i18n="excerpt_tag">TRECHO DE ABERTURA</span>
-          <p class="excerpt-text" data-i18n="excerpt_p1">
-            “Jesus orou três vezes no Getsêmani. E a resposta foi não.”
-          </p>
-          <p class="excerpt-text muted" data-i18n="excerpt_p2">
-            Se até mesmo no momento mais decisivo da narrativa bíblica a oração não funcionou como um pedido atendido automaticamente no balcão, talvez o problema nunca tenha sido o silêncio de Deus — mas o que nos ensinaram a esperar dele.
-          </p>
-          <a
-            id="secondary-amazon-cta"
-            href="https://www.amazon.com.br/dp/B0GZHS3YHK"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-link"
-            data-i18n="excerpt_cta"
-          >
-            Continuar lendo na Amazon →
-          </a>
-        </div>
+        <article class="book-page" aria-label="Trecho gratuito do livro">
+          <div class="book-page-top">
+            <span class="book-page-running" data-i18n="page_running">O NÃO DE DEUS É O ESPAÇO PARA NOSSA LIBERDADE</span>
+            <span class="book-page-num" data-i18n="page_num">Páginas 2–3</span>
+          </div>
+
+          <h3 class="book-chapter-title" data-i18n="page_chapter">
+            O Ponto de Partida — O Paradoxo da Oração
+          </h3>
+
+          <div class="book-rule" aria-hidden="true"></div>
+
+          <div class="book-prose" data-i18n-html="page_body">
+            <p>
+              Marcos 11:24 nos diz que Deus nos atenderá em tudo o que pedirmos, creiamos. Outros versos dizem que seremos atendidos se nosso pedido estiver alinhado com a vontade de Deus.
+            </p>
+            <p>
+              Sendo assim, toda oração verdadeira pode acabar revelando uma dissonância inevitável: pedimos A e Deus talvez responda com B — muitas vezes o oposto exato.
+            </p>
+            <ul class="paradox-list">
+              <li><strong>Pedimos libertação</strong> <span class="arrow">→</span> vem uma escravidão prolongada (como os quarenta anos no deserto depois do Êxodo).</li>
+              <li><strong>Pedimos cura</strong> <span class="arrow">→</span> a doença continua, como o espinho na carne de Paulo, para que a graça nunca seja confundida com mérito pessoal.</li>
+              <li><strong>Pedimos vida</strong> <span class="arrow">→</span> recebemos morte, porque quem quer salvar a própria vida acaba perdendo-a (Mt 16,25).</li>
+              <li><strong>Pedimos visão</strong> <span class="arrow">→</span> chega a cegueira, pois algumas verdades só se enxergam no escuro.</li>
+              <li><strong>Pedimos compreensão</strong> <span class="arrow">→</span> vem o silêncio, porque certas realidades só se atravessam quando as palavras param.</li>
+              <li><strong>Pedimos alívio</strong> <span class="arrow">→</span> o espinho vira algo permanente, porque um alívio cedo interromperia o caminho necessário.</li>
+            </ul>
+            <p>
+              Não é permissão passiva. Deus quer mesmo o oposto. O “não” não é descuido; é vontade afirmativa. Ele nasce da diferença radical de ser: o finito não pode ditar ao Infinito sem que este deixe de ser infinito. Atender o pedido do jeito que queremos transformaria Deus em ferramenta do nosso desejo — um amor servil, não soberano.
+            </p>
+            <p>
+              O “não” de Deus é o sim à vontade d’Ele. Toda realidade é um sim de Deus; para nós, criaturas finitas, esse sim pode aparecer como não exatamente quando vai contra o que desejamos no momento. Essa inversão tem três sentidos: ensina (Deus não se deixa manipular), revela o abismo entre o Criador e a criatura (entre quem recebe a existência e Quem é a própria Existência) e preserva a relação verdadeira (Eu-Tu).
+            </p>
+          </div>
+
+          <div class="book-page-footer">
+            <span class="next-chapter-hint" data-i18n="page_next_hint">
+              A seguir no livro: O Véu — Distância como Condição de Existência
+            </span>
+            <a
+              id="secondary-amazon-cta"
+              href="https://www.amazon.com.br/dp/B0GZHS3YHK"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              data-i18n="excerpt_cta"
+            >
+              Continuar lendo na Amazon →
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -281,6 +296,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

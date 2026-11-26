@@ -1,7 +1,3 @@
-// Endereço do formulário Formspree (ex.: "https://formspree.io/f/abcdwxyz").
-// Enquanto estiver vazio, o formulário mostra um aviso em vez de enviar.
-const FORM_ENDPOINT = "";
-
 const AMAZON_LINKS = {
   pt: "https://www.amazon.com.br/dp/B0GZHS3YHK",
   en: "https://www.amazon.com/dp/B0HS8GGMML",
@@ -30,7 +26,7 @@ const TRANSLATIONS = {
     hero_rating: "★★★★★ 5,0 na Amazon",
     hero_format: "Leitura em uma sentada • Kindle & Kindle Unlimited",
     cta_amazon: "Ler na Amazon (Kindle)",
-    cta_sample: "Receber 1º trecho grátis",
+    cta_sample: "Ler um trecho grátis",
     ku_note: "Disponível gratuitamente para assinantes do Kindle Unlimited ou para compra avulsa.",
     cover_title:
       'O <span class="gold">NÃO</span><br />DE DEUS<br /><span class="small-word">É</span><br />O ESPAÇO<br /><span class="small-word">PARA NOSSA</span><br /><span class="gold">LIBERDADE</span>',
@@ -59,21 +55,28 @@ const TRANSLATIONS = {
       "<strong>Quem já orou e recebeu silêncio:</strong> e sente que há algo profundamente errado com a ideia de um “Deus balconista”.",
     aud_3:
       "<strong>Céticos e almas inquietas:</strong> que rejeitam caricaturas religiosas, mas se interessam por uma reflexão lúcida sobre existência, fé e liberdade.",
-    sample_kicker: "PRÉVIA GRATUITA & CARTAS DO AUTOR",
-    sample_title: "Leia a abertura e acompanhe novas reflexões por e-mail",
+    sample_kicker: "LEITURA GRATUITA — SEM CADASTRO",
+    sample_title: "Leia um trecho completo do livro agora mesmo",
     sample_intro:
-      "Deixe seu e-mail para ler agora o trecho de abertura e receber, de vez em quando, novos textos sobre fé, dúvida e liberdade. Sem spam.",
-    form_label: "Seu melhor e-mail",
-    form_btn: "Quero receber",
-    form_placeholder: "seu@email.com",
-    form_demo_msg: "O cadastro ainda não está ativo. Tente de novo em breve.",
-    form_ok_msg: "Pronto, seu e-mail foi registrado. O trecho está logo ao lado.",
-    form_err_msg: "Não foi possível registrar agora. Tente de novo em instantes.",
-    excerpt_tag: "TRECHO DO LIVRO",
-    excerpt_p1:
-      "“O Não é a forma que Deus tem de nos manter como seres livres e potentes. É o véu que nos protege do colapso diante do infinito que é o próprio Deus.”",
-    excerpt_p2:
-      "Este livro nasceu de uma experiência difícil vivida há cinco anos, quando me perguntei: se Deus já conhece todas as minhas necessidades e só atende o que está de acordo com Sua vontade, por que então orar? Eu orei bastante, não fui atendido — e passei cinco anos investigando esse dilema.",
+      "Sem pedir e-mail, sem cadastro. Leia abaixo o capítulo completo “O Ponto de Partida — O Paradoxo da Oração”.",
+    page_running: "O NÃO DE DEUS É O ESPAÇO PARA NOSSA LIBERDADE",
+    page_num: "Páginas 2–3",
+    page_chapter: "O Ponto de Partida — O Paradoxo da Oração",
+    page_body: `
+      <p>Marcos 11:24 nos diz que Deus nos atenderá em tudo o que pedirmos, creiamos. Outros versos dizem que seremos atendidos se nosso pedido estiver alinhado com a vontade de Deus.</p>
+      <p>Sendo assim, toda oração verdadeira pode acabar revelando uma dissonância inevitável: pedimos A e Deus talvez responda com B — muitas vezes o oposto exato.</p>
+      <ul class="paradox-list">
+        <li><strong>Pedimos libertação</strong> <span class="arrow">→</span> vem uma escravidão prolongada (como os quarenta anos no deserto depois do Êxodo).</li>
+        <li><strong>Pedimos cura</strong> <span class="arrow">→</span> a doença continua, como o espinho na carne de Paulo, para que a graça nunca seja confundida com mérito pessoal.</li>
+        <li><strong>Pedimos vida</strong> <span class="arrow">→</span> recebemos morte, porque quem quer salvar a própria vida acaba perdendo-a (Mt 16,25).</li>
+        <li><strong>Pedimos visão</strong> <span class="arrow">→</span> chega a cegueira, pois algumas verdades só se enxergam no escuro.</li>
+        <li><strong>Pedimos compreensão</strong> <span class="arrow">→</span> vem o silêncio, porque certas realidades só se atravessam quando as palavras param.</li>
+        <li><strong>Pedimos alívio</strong> <span class="arrow">→</span> o espinho vira algo permanente, porque um alívio cedo interromperia o caminho necessário.</li>
+      </ul>
+      <p>Não é permissão passiva. Deus quer mesmo o oposto. O “não” não é descuido; é vontade afirmativa. Ele nasce da diferença radical de ser: o finito não pode ditar ao Infinito sem que este deixe de ser infinito. Atender o pedido do jeito que queremos transformaria Deus em ferramenta do nosso desejo — um amor servil, não soberano.</p>
+      <p>O “não” de Deus é o sim à vontade d’Ele. Toda realidade é um sim de Deus; para nós, criaturas finitas, esse sim pode aparecer como não exatamente quando vai contra o que desejamos no momento. Essa inversão tem três sentidos: ensina (Deus não se deixa manipular), revela o abismo entre o Criador e a criatura (entre quem recebe a existência e Quem é a própria Existência) e preserva a relação verdadeira (Eu-Tu).</p>
+    `,
+    page_next_hint: "A seguir no livro: O Véu — Distância como Condição de Existência",
     excerpt_cta: "Continuar lendo na Amazon →",
     author_kicker: "SOBRE O AUTOR",
     author_bio:
@@ -92,7 +95,7 @@ const TRANSLATIONS = {
     hero_rating: "New English Edition on Amazon",
     hero_format: "One-sitting read • Kindle & Kindle Unlimited",
     cta_amazon: "Read on Amazon (Kindle)",
-    cta_sample: "Get free opening excerpt",
+    cta_sample: "Read a free excerpt",
     ku_note: "Read free with Kindle Unlimited or purchase the Kindle edition directly.",
     cover_title:
       'GOD’S <span class="gold">NO</span><br /><span class="small-word">IS</span><br />THE SPACE<br /><span class="small-word">FOR OUR</span><br /><span class="gold">FREEDOM</span>',
@@ -121,21 +124,28 @@ const TRANSLATIONS = {
       "<strong>Anyone who prayed and heard silence:</strong> and senses something is deeply broken about treating God like a store clerk.",
     aud_3:
       "<strong>Skeptics and restless thinkers:</strong> who reject religious caricatures, yet welcome a lucid inquiry into faith, doubt, and freedom.",
-    sample_kicker: "FREE EXCERPT & AUTHOR LETTERS",
-    sample_title: "Read the opening and receive quiet reflections by email",
+    sample_kicker: "FREE READING — NO EMAIL REQUIRED",
+    sample_title: "Read a full excerpt from the book right now",
     sample_intro:
-      "Leave your email to read the opening excerpt right away and receive occasional new essays on faith, doubt, and freedom. No spam.",
-    form_label: "Your email address",
-    form_btn: "Send me the excerpt",
-    form_placeholder: "you@email.com",
-    form_demo_msg: "Sign-up is not active yet. Please try again soon.",
-    form_ok_msg: "Done, your email is saved. The excerpt is right beside this form.",
-    form_err_msg: "Could not save your email right now. Please try again shortly.",
-    excerpt_tag: "FROM THE BOOK",
-    excerpt_p1:
-      "“No is God’s way of keeping us as free and powerful beings. It is the veil that protects us from collapse before the infinite that is God himself.”",
-    excerpt_p2:
-      "This book was born from a painful season five years ago, when I began asking: if God already knows everything I need and only grants what aligns with His will, why pray at all? I prayed hard, was not answered—and spent five years wrestling with that dilemma.",
+      "No email, no sign-up required. Read the complete chapter “The Paradox of Prayer” below.",
+    page_running: "GOD’S NO IS THE SPACE FOR OUR FREEDOM",
+    page_num: "Pages 2–3",
+    page_chapter: "The Paradox of Prayer",
+    page_body: `
+      <p>Mark 11:24 tells us that God will answer everything we ask for in faith. Other verses say we will be answered if our request is aligned with God’s will.</p>
+      <p>This being so, every sincere prayer may end up revealing an inevitable dissonance: we ask for A and God may respond with B — often the exact opposite.</p>
+      <ul class="paradox-list">
+        <li><strong>We ask for liberation</strong> <span class="arrow">→</span> a prolonged bondage arrives (like the forty years in the desert after the Exodus).</li>
+        <li><strong>We ask for healing</strong> <span class="arrow">→</span> the illness persists, like the thorn in Paul’s flesh, so that grace may never be confused with personal merit.</li>
+        <li><strong>We ask for life</strong> <span class="arrow">→</span> we receive death, because whoever wants to save their own life ends up losing it (Mt 16:25).</li>
+        <li><strong>We ask for sight</strong> <span class="arrow">→</span> blindness comes, for some truths are only seen in the dark.</li>
+        <li><strong>We ask for understanding</strong> <span class="arrow">→</span> silence arrives, because certain realities can only be traversed when words stop.</li>
+        <li><strong>We ask for relief</strong> <span class="arrow">→</span> the thorn becomes permanent, because early relief would interrupt the necessary path.</li>
+      </ul>
+      <p>This is not passive permission. God truly wants the opposite. The No is not neglect; it is affirmative will. It arises from the radical difference of being: the finite cannot dictate to the Infinite without the Infinite ceasing to be infinite. Answering our request as we want it would turn God into a tool of our desire — a servile love, not a sovereign one.</p>
+      <p>God’s No is the yes to His own will. All reality is a yes from God; for us, finite creatures, that yes may appear as No precisely when it goes against what we desire in the moment. This inversion has three meanings: it teaches (God does not allow Himself to be manipulated), it reveals the abyss between Creator and creature (between the one who receives existence and the One who is Existence itself), and it preserves the true relationship (I-Thou).</p>
+    `,
+    page_next_hint: "Up next in the book: Distance as a Condition of Existence",
     excerpt_cta: "Continue reading on Amazon →",
     author_kicker: "ABOUT THE AUTHOR",
     author_bio:
@@ -163,9 +173,6 @@ function applyLanguage(lang) {
     const key = el.getAttribute("data-i18n-html");
     if (dict[key]) el.innerHTML = dict[key];
   });
-
-  const emailInput = document.getElementById("email-input");
-  if (emailInput) emailInput.placeholder = dict.form_placeholder;
 
   const primaryCta = document.getElementById("primary-amazon-cta");
   const secondaryCta = document.getElementById("secondary-amazon-cta");
@@ -212,37 +219,4 @@ document.addEventListener("DOMContentLoaded", () => {
       applyLanguage(btn.getAttribute("data-lang"));
     });
   });
-
-  // Envio do e-mail para o Formspree sem sair da página
-  const form = document.getElementById("lead-form");
-  const feedback = document.getElementById("form-feedback");
-  if (form && feedback) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const dict = TRANSLATIONS[currentLang];
-      if (!FORM_ENDPOINT) {
-        feedback.textContent = dict.form_demo_msg;
-        return;
-      }
-      const button = form.querySelector("button");
-      if (button) button.disabled = true;
-      try {
-        const data = new FormData(form);
-        data.append("idioma", currentLang);
-        data.append("origem", new URLSearchParams(window.location.search).get("utm_source") || "direto");
-        const res = await fetch(FORM_ENDPOINT, {
-          method: "POST",
-          body: data,
-          headers: { Accept: "application/json" },
-        });
-        if (!res.ok) throw new Error(String(res.status));
-        form.reset();
-        feedback.textContent = dict.form_ok_msg;
-      } catch {
-        feedback.textContent = dict.form_err_msg;
-      } finally {
-        if (button) button.disabled = false;
-      }
-    });
-  }
 });
